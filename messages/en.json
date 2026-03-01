@@ -1,0 +1,70 @@
+{
+    "Navigation": {
+        "menu": "Menu",
+        "locations": "Locations",
+        "about": "About"
+    },
+    "Hero": {
+        "title": "Taste the Italian Wave",
+        "subtitle": "Original Gelato & Belgian Waffles in Uzbekistan",
+        "viewMenu": "View Menu",
+        "ourLocations": "Our Locations",
+        "orderWolt": "Order via Wolt"
+    },
+    "About": {
+        "title": "The Gusttimo Story",
+        "subtitle": "A slice of Italy in the heart of Tashkent.",
+        "description1": "Born from a love for authentic Italian desserts, Gusttimo is where tradition meets modern quick service.",
+        "description2": "Whether you are here for a quick bite, a family treat, or a sweet escape, our gelato and Belgian waffles are made fresh daily using only the finest ingredients."
+    },
+    "Features": {
+        "recipe": "Original Italian Recipe",
+        "ingredients": "Fresh Premium Ingredients",
+        "branches": "3 Convenient Branches",
+        "vibe": "Casual & Family Friendly"
+    },
+    "Menu": {
+        "searchPlaceholder": "Search menu...",
+        "title": "Our Menu",
+        "subtitle": "Discover our special flavors",
+        "priceLabel": "Price",
+        "weightLabel": "Weight",
+        "details": "Details",
+        "close": "Close",
+        "descriptionFallback": "A delicious treat crafted with premium ingredients and our signature recipe.",
+        "categories": {
+            "all": "All",
+            "fondue": "Fondue",
+            "waffles": "Waffles",
+            "iceCream": "Ice Cream",
+            "desserts": "Desserts",
+            "combos": "Combos",
+            "sandwiches": "Sandwiches",
+            "croissants": "Croissants",
+            "coffee": "Coffee",
+            "freshJuices": "Fresh Juices",
+            "lemonades": "Lemonades",
+            "mojito": "Mojito",
+            "smoothies": "Smoothies",
+            "milkshakes": "Milkshakes",
+            "teas": "Teas"
+        }
+    },
+    "Reviews": {
+        "title": "Why People Love Gusttimo"
+    },
+    "Locations": {
+        "title": "Our Branches",
+        "getDirections": "Get Directions"
+    },
+    "Instagram": {
+        "title": "Follow the sweet life",
+        "handle": "@gusttimo.uz"
+    },
+    "CTA": {
+        "title": "Craving something sweet?",
+        "subtitle": "Order now in 1 click or visit us today.",
+        "findNearest": "Find nearest branch",
+        "orderWolt": "Order via Delivery"
+    }
+}

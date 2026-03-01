@@ -1,0 +1,70 @@
+{
+    "Navigation": {
+        "menu": "Menyu",
+        "locations": "Filiallar",
+        "about": "Biz haqimizda"
+    },
+    "Hero": {
+        "title": "Italiya to'lqinini his eting",
+        "subtitle": "O'zbekistonda original jelato va Belgiya vaflilari",
+        "viewMenu": "Menyuni ko'rish",
+        "ourLocations": "Filiallarimiz",
+        "orderWolt": "Wolt orqali buyurtma"
+    },
+    "About": {
+        "title": "Gusttimo Hikoyasi",
+        "subtitle": "Toshkent markazida Italiya nafasi.",
+        "description1": "Gusttimo - bu asl italyan shirinliklariga bo'lgan muhabbat va zamonaviy tezkor xizmatning uyg'unlashgan joyi.",
+        "description2": "Tezkor tamaddi, oilaviy dam olish yoki shirin xordiq izlayotgan bo'lsangiz ham — bizning jelato va Belgiya vaflilarimiz har kuni yangi tayyorlanadi."
+    },
+    "Features": {
+        "recipe": "Asl Italiya retsepti",
+        "ingredients": "Yangi va yuqori sifatli mahsulotlar",
+        "branches": "3 ta qulay filiallar",
+        "vibe": "Oilaviy va shinam muhit"
+    },
+    "Menu": {
+        "searchPlaceholder": "Menyudan qidirish...",
+        "title": "Bizning Menyu",
+        "subtitle": "Maxsus ta'mlarimizni kashf eting",
+        "priceLabel": "Narx",
+        "weightLabel": "Hajm",
+        "details": "Batafsil",
+        "close": "Yopish",
+        "descriptionFallback": "Premium mahsulotlar va maxsus retseptimiz asosida tayyorlangan ajoyib desert.",
+        "categories": {
+            "all": "Barchasi",
+            "fondue": "Fondyu",
+            "waffles": "Vaflilar",
+            "iceCream": "Muzqaymoqlar",
+            "desserts": "Shirinliklar",
+            "combos": "Kombo",
+            "sandwiches": "Sendvichlar",
+            "croissants": "Kruassanlar",
+            "coffee": "Qahva",
+            "freshJuices": "Yangi Sharbatlar",
+            "lemonades": "Limonadlar",
+            "mojito": "Moxito",
+            "smoothies": "Smuzilar",
+            "milkshakes": "Milksteyklar",
+            "teas": "Mevali Choylar"
+        }
+    },
+    "Reviews": {
+        "title": "Nega Gusttimoni sevishadi"
+    },
+    "Locations": {
+        "title": "Bizning Filiallarimiz",
+        "getDirections": "Manzilni ko'rish"
+    },
+    "Instagram": {
+        "title": "Bizni kuzatib boring",
+        "handle": "@gusttimo.uz"
+    },
+    "CTA": {
+        "title": "Shirinlik xohlayapsizmi?",
+        "subtitle": "1 klikda buyurtma bering yoki bizga tashrif buyuring.",
+        "findNearest": "Eng yaqin filial",
+        "orderWolt": "Yetkazib berish"
+    }
+}
