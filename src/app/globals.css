@@ -45,3 +45,10 @@ html.lenis body {
 .lenis.lenis-smooth iframe {
   pointer-events: none;
 }
+
+/* Hardware Acceleration Helpers */
+.will-change-transform {
+  will-change: transform;
+  transform: translateZ(0);
+  /* Force GPU */
+}

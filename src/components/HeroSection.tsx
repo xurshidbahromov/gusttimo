@@ -21,20 +21,21 @@ export default function HeroSection() {
     };
 
     return (
-        <section className="relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden pt-32 pb-40">
-            {/* Background Image with Gradient Overlay positioned fixed for parallax effect */}
+        <section className="relative min-h-screen w-full flex flex-col items-center justify-center pt-32 pb-40">
+            {/* Background Image with Gradient Overlay positioned sticky for performance */}
             <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-                <div className="fixed inset-0 w-full h-[100vh] min-h-[100vh]">
+                <div className="sticky top-0 w-full h-[100vh]">
                     <motion.div
                         initial={{ scale: 1.1 }}
                         animate={{ scale: 1 }}
                         transition={{ duration: 2, ease: "easeOut" }}
-                        className="absolute inset-0"
+                        className="absolute inset-0 will-change-transform"
                     >
                         <img
                             src="/menu_photos/Mix vafli.jpeg"
                             alt="Gusttimo Gelato and Waffles"
                             className="w-full h-full object-cover"
+                            fetchPriority="high"
                         />
                     </motion.div>
                     {/* Milky overlays to ensure dark text reads perfectly while image stays visible */}

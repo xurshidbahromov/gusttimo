@@ -15,23 +15,21 @@ export default function AboutSection() {
         offset: ["start start", "end end"]
     });
 
-    // Smooth physics for parallax
-    const spring = useSpring(scrollYProgress, { stiffness: 100, damping: 30, restDelta: 0.001 });
-
+    // Directly use scrollYProgress (bypassing heavy useSpring physics parsing)
     // Parallax mapping ranges for Hero
-    const y1 = useTransform(spring, [0, 1], [0, -400]);
-    const y2 = useTransform(spring, [0, 1], [0, -250]);
-    const scale1 = useTransform(spring, [0, 0.5], [1, 1.15]);
-    const opacityText = useTransform(spring, [0, 0.15, 0.8, 1], [1, 0, 0, 0]);
+    const y1 = useTransform(scrollYProgress, [0, 1], [0, -400]);
+    const y2 = useTransform(scrollYProgress, [0, 1], [0, -250]);
+    const scale1 = useTransform(scrollYProgress, [0, 0.5], [1, 1.15]);
+    const opacityText = useTransform(scrollYProgress, [0, 0.15, 0.8, 1], [1, 0, 0, 0]);
 
     // Secondary mapping ranges for Content
-    const yImage1 = useTransform(spring, [0, 1], [50, -80]);
-    const yText1 = useTransform(spring, [0, 1], [100, -150]);
-    const yText2 = useTransform(spring, [0, 1], [50, -80]);
-    const yImage2 = useTransform(spring, [0, 1], [150, -200]);
+    const yImage1 = useTransform(scrollYProgress, [0, 1], [50, -80]);
+    const yText1 = useTransform(scrollYProgress, [0, 1], [100, -150]);
+    const yText2 = useTransform(scrollYProgress, [0, 1], [50, -80]);
+    const yImage2 = useTransform(scrollYProgress, [0, 1], [150, -200]);
 
-    const innerImg1 = useTransform(spring, [0, 1], [-80, 80]);
-    const innerImg2 = useTransform(spring, [0, 1], [-50, 50]);
+    const innerImg1 = useTransform(scrollYProgress, [0, 1], [-80, 80]);
+    const innerImg2 = useTransform(scrollYProgress, [0, 1], [-50, 50]);
 
     return (
         <section ref={containerRef} className="relative min-h-[300vh] bg-background text-foreground overflow-clip">
@@ -54,7 +52,7 @@ export default function AboutSection() {
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 1, ease: "easeOut" }}
-                        className="text-[4.5rem] sm:text-[8rem] md:text-[14rem] lg:text-[18rem] font-serif font-black italic tracking-tighter text-foreground uppercase mix-blend-overlay leading-none opacity-90 text-center"
+                        className="text-[4.5rem] sm:text-[8rem] md:text-[14rem] lg:text-[18rem] font-serif font-black italic tracking-tighter text-foreground uppercase leading-none opacity-90 text-center"
                     >
                         {t('title').split(' ')[0]}
                     </motion.h1>
@@ -82,9 +80,10 @@ export default function AboutSection() {
                 >
                     <img
                         src="/menu_photos/Mix vafli.jpeg"
-                        className="w-full h-full object-cover filter brightness-[0.85] contrast-[1.05]"
+                        className="w-full h-full object-cover"
                         alt="Gusttimo Hero Mix Waffle"
                     />
+                    <div className="absolute inset-0 bg-black/15 pointer-events-none" />
                     <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80" />
                 </motion.div>
 
@@ -94,9 +93,10 @@ export default function AboutSection() {
                 >
                     <img
                         src="/menu_photos/Fistashka vafli.jpeg"
-                        className="w-full h-full object-cover filter brightness-[0.85] contrast-[1.05]"
+                        className="w-full h-full object-cover"
                         alt="Gusttimo Pistachio"
                     />
+                    <div className="absolute inset-0 bg-black/15 pointer-events-none" />
                 </motion.div>
 
                 <motion.div
@@ -105,9 +105,10 @@ export default function AboutSection() {
                 >
                     <img
                         src="/menu_photos/Qlubnay with banan.jpeg"
-                        className="w-full h-full object-cover filter brightness-[0.85] contrast-[1.05]"
+                        className="w-full h-full object-cover"
                         alt="Gusttimo Strawberries"
                     />
+                    <div className="absolute inset-0 bg-black/15 pointer-events-none" />
                 </motion.div>
 
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/40 to-background z-10 pointer-events-none" />
@@ -116,8 +117,8 @@ export default function AboutSection() {
             {/* Structured Content Overlay */}
             <div className="relative z-30 bg-background pt-32 pb-48 px-6 md:px-12 -mt-10 rounded-t-[4rem] border-t border-foreground/10">
                 {/* Background elements for depth */}
-                <motion.div style={{ rotate: useTransform(spring, [0, 1], [0, 45]) }} className="absolute top-[10%] right-[-10%] w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
-                <motion.div style={{ rotate: useTransform(spring, [0, 1], [0, -45]) }} className="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] bg-foreground/5 rounded-full blur-[150px] pointer-events-none" />
+                <motion.div style={{ rotate: useTransform(scrollYProgress, [0, 1], [0, 45]) }} className="absolute top-[10%] right-[-10%] w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
+                <motion.div style={{ rotate: useTransform(scrollYProgress, [0, 1], [0, -45]) }} className="absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] bg-foreground/5 rounded-full blur-[150px] pointer-events-none" />
 
                 <div className="container mx-auto max-w-6xl relative z-10">
 
@@ -136,8 +137,9 @@ export default function AboutSection() {
                                 style={{ y: innerImg1, scale: 1.15 }}
                                 src="https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=2000" // Premium Gelato Shot
                                 alt="Gusttimo Premium Gelato"
-                                className="w-full h-full object-cover filter brightness-[0.85] contrast-[1.1] group-hover:scale-125 transition-transform duration-[3s] ease-out origin-center"
+                                className="w-full h-full object-cover group-hover:scale-125 transition-transform duration-[3s] ease-out origin-center"
                             />
+                            <div className="absolute inset-0 bg-black/15 pointer-events-none" />
                             <div className="absolute inset-0 bg-gradient-to-tr from-black/50 to-transparent pointer-events-none" />
                         </motion.div>
 
@@ -218,9 +220,10 @@ export default function AboutSection() {
                                 style={{ y: innerImg2, scale: 1.15 }}
                                 src="/menu_photos/Banan and Nutella.jpeg" // Real Gusttimo Product
                                 alt="Gusttimo Craftsmanship"
-                                className="w-full h-full object-cover filter brightness-[0.8] contrast-[1.1] group-hover:scale-125 transition-transform duration-[4s] ease-out origin-top"
+                                className="w-full h-full object-cover group-hover:scale-125 transition-transform duration-[4s] ease-out origin-top"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 to-transparent pointer-events-none mix-blend-overlay" />
+                            <div className="absolute inset-0 bg-black/20 pointer-events-none" />
+                            <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 to-transparent pointer-events-none" />
                         </motion.div>
                     </div>
                 </div>

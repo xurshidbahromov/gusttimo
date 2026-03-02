@@ -2,6 +2,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import { motion, AnimatePresence } from 'framer-motion';
+import Tilt from 'react-parallax-tilt';
 import { X, ChevronRight, ShoppingBag, Search } from 'lucide-react';
 
 type Category = 'all' | 'waffles' | 'iceCream' | 'fondue' | 'desserts' | 'combos' | 'sandwiches' | 'croissants' | 'coffee' | 'freshJuices' | 'lemonades' | 'mojito' | 'smoothies' | 'milkshakes' | 'teas';
@@ -247,7 +248,7 @@ export default function MenuSection() {
                                         <div className="h-px bg-gradient-to-r from-transparent via-foreground/20 to-transparent flex-1" />
                                     </div>
                                 )}
-                                <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                                     <AnimatePresence mode="popLayout">
                                         {items.map(item => (
                                             <motion.div
@@ -264,11 +265,21 @@ export default function MenuSection() {
                                                 >
                                                     {/* Full bleed Image Section */}
                                                     <div className="absolute inset-0 overflow-hidden">
-                                                        <img
-                                                            src={item.image}
-                                                            alt={item.title}
-                                                            className="w-full h-full object-cover transition-transform duration-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-110"
-                                                        />
+                                                        <Tilt
+                                                            tiltMaxAngleX={3}
+                                                            tiltMaxAngleY={3}
+                                                            perspective={1000}
+                                                            transitionSpeed={1000}
+                                                            scale={1.02}
+                                                            gyroscope={false}
+                                                            className="h-full"
+                                                        >
+                                                            <img
+                                                                src={item.image}
+                                                                alt={item.title}
+                                                                className="w-full h-full object-cover transition-transform duration-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-110"
+                                                            />
+                                                        </Tilt>
                                                         {/* Gradient overlays to ensure text readability */}
                                                         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/10 transition-opacity duration-500 group-hover:opacity-90" />
 
@@ -306,7 +317,7 @@ export default function MenuSection() {
                                             </motion.div>
                                         ))}
                                     </AnimatePresence>
-                                </motion.div>
+                                </div>
                             </div>
                         );
                     })}
