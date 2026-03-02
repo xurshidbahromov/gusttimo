@@ -3,7 +3,8 @@ import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
 
 export default function Footer() {
-    const t = useTranslations('Navigation');
+    const t = useTranslations('Footer');
+    const tNav = useTranslations('Navigation');
     return (
         <footer className="bg-foreground text-background py-20 px-6 md:px-12 border-t border-background/10 relative overflow-hidden">
             {/* Background Texture elements */}
@@ -26,9 +27,9 @@ export default function Footer() {
                     {/* Navigation */}
                     <div className="flex flex-col items-center md:items-start space-y-4">
                         <h4 className="text-primary font-bold tracking-widest uppercase text-sm mb-2">{t('explore')}</h4>
-                        <Link href="/menu" className="text-xl font-serif text-background/80 hover:text-white transition-colors hover:translate-x-2 transform duration-300 w-fit">{t('menu')}</Link>
-                        <Link href="/locations" className="text-xl font-serif text-background/80 hover:text-white transition-colors hover:translate-x-2 transform duration-300 w-fit">{t('locations')}</Link>
-                        <Link href="/about" className="text-xl font-serif text-background/80 hover:text-white transition-colors hover:translate-x-2 transform duration-300 w-fit">{t('about')}</Link>
+                        <Link href="/menu" className="text-xl font-serif text-background/80 hover:text-white transition-colors hover:translate-x-2 transform duration-300 w-fit">{tNav('menu')}</Link>
+                        <Link href="/locations" className="text-xl font-serif text-background/80 hover:text-white transition-colors hover:translate-x-2 transform duration-300 w-fit">{tNav('locations')}</Link>
+                        <Link href="/about" className="text-xl font-serif text-background/80 hover:text-white transition-colors hover:translate-x-2 transform duration-300 w-fit">{tNav('about')}</Link>
                     </div>
 
                     {/* Socials */}
