@@ -7,6 +7,7 @@ import "../globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Preloader from "@/components/Preloader";
 
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-serif", style: ["normal", "italic"] });
 const manrope = Manrope({ subsets: ["latin"], variable: "--font-sans" });
@@ -47,6 +48,7 @@ export default async function LocaleLayout({
         <html lang={locale} className="lenis lenis-smooth" suppressHydrationWarning>
             <body className={`${manrope.variable} ${playfair.variable} font-sans antialiased bg-background text-foreground`} suppressHydrationWarning>
                 <NextIntlClientProvider messages={messages}>
+                    <Preloader />
                     <SmoothScroll>
                         <Navbar />
                         {children}
