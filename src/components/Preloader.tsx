@@ -5,15 +5,25 @@ import { useTranslations } from "next-intl";
 
 export default function Preloader() {
     const [isLoading, setIsLoading] = useState(true);
+    const [instantHide, setInstantHide] = useState(false);
     const t = useTranslations('Hero');
 
     useEffect(() => {
+        // Only run animation once per session
+        const hasSeen = sessionStorage.getItem('gusttimo_preloader_seen');
+        if (hasSeen) {
+            setInstantHide(true);
+            setIsLoading(false);
+            return;
+        }
+
         // Prevent scrolling while loading
         document.body.style.overflow = "hidden";
 
         // Artificial delay to show the nice animation and ensure assets are ready
         const timer = setTimeout(() => {
             setIsLoading(false);
+            sessionStorage.setItem('gusttimo_preloader_seen', 'true');
             // Restore smooth scrolling for Lenis
             document.body.style.overflow = "";
         }, 2200); // 2.2 seconds total loading screen
@@ -23,6 +33,8 @@ export default function Preloader() {
             document.body.style.overflow = "";
         };
     }, []);
+
+    if (instantHide) return null;
 
     // Text reveal animation steps
     const textVariants = {
@@ -45,7 +57,7 @@ export default function Preloader() {
                     initial={{ y: 0 }}
                     exit={{ y: "-100%" }}
                     transition={{ duration: 0.9, ease: [0.76, 0, 0.24, 1] }}
-                    className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-foreground text-primary overflow-hidden"
+                    className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-foreground text-primary overflow-hidden"
                 >
                     {/* Background subtle texture glow */}
                     <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--color-primary)_0%,_transparent_50%)] opacity-5 pointer-events-none" />
