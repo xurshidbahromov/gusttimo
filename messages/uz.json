@@ -57,7 +57,29 @@
         }
     },
     "Reviews": {
-        "title": "Nega Gusttimoni sevishadi"
+        "title": "Nega Gusttimoni sevishadi",
+        "items": {
+            "1": {
+                "name": "Aliya K.",
+                "text": "Shahardagi eng zo'r Belgiya vaflilari! Nutellalisi shunchaki ajoyib."
+            },
+            "2": {
+                "name": "Rustam T.",
+                "text": "Shokoladli chizkeyk juda mazali edi. Haqiqiy premium sifat."
+            },
+            "3": {
+                "name": "Zuhra N.",
+                "text": "Bunday yuqori sifatli jelato uchun narxlar juda hamyonbop. Bolalarimga juda yoqadi."
+            },
+            "4": {
+                "name": "Timur A.",
+                "text": "Toshkentning o'zida haqiqiy italyancha ta'm. Xizmat ko'rsatish ham a'lo."
+            },
+            "5": {
+                "name": "Feruza I.",
+                "text": "Taqdimot yuqori darajada, muhit esa dam olish kunlari uchrashuvlari uchun ayni muddao."
+            }
+        }
     },
     "Locations": {
         "title": "Bizning Filiallarimiz",

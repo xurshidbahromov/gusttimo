@@ -3,19 +3,19 @@ import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { Star } from 'lucide-react';
 
-const REVIEWS = [
-    { id: 1, name: "Aliya K.", text: "Best Belgian waffles in the city! The Nutella one is to die for.", rating: 5 },
-    { id: 2, name: "Rustam T.", text: "Chocolate cheesecake was absolutely delicious. Premium quality.", rating: 5 },
-    { id: 3, name: "Zuhra N.", text: "Prices are very reasonable for such high quality gelato. My kids love it.", rating: 5 },
-    { id: 4, name: "Timur A.", text: "Authentic Italian taste right here in Tashkent. Smooth service too.", rating: 5 },
-    { id: 5, name: "Feruza I.", text: "The presentation is top notch, and the vibe is perfect for a weekend date.", rating: 5 }
-];
-
-// Duplicate for marquee effect
-const MARQUEE_ITEMS = [...REVIEWS, ...REVIEWS];
-
 export default function ReviewsSection() {
     const t = useTranslations('Reviews');
+
+    const localizedReviews = [
+        { id: 1, rating: 5, name: t('items.1.name'), text: t('items.1.text') },
+        { id: 2, rating: 5, name: t('items.2.name'), text: t('items.2.text') },
+        { id: 3, rating: 5, name: t('items.3.name'), text: t('items.3.text') },
+        { id: 4, rating: 5, name: t('items.4.name'), text: t('items.4.text') },
+        { id: 5, rating: 5, name: t('items.5.name'), text: t('items.5.text') }
+    ];
+
+    // Duplicate for marquee effect
+    const marqueeItems = [...localizedReviews, ...localizedReviews];
 
     return (
         <section className="py-24 bg-foreground text-background overflow-hidden relative">
@@ -33,7 +33,7 @@ export default function ReviewsSection() {
                     transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
                     className="flex whitespace-nowrap gap-6 px-3"
                 >
-                    {MARQUEE_ITEMS.map((review, idx) => (
+                    {marqueeItems.map((review, idx) => (
                         <div
                             key={`${review.id}-${idx}`}
                             className="w-[350px] md:w-[450px] shrink-0 bg-background/5 border border-background/10 p-8 rounded-3xl backdrop-blur-md hover:bg-background/10 transition-colors"

@@ -57,7 +57,29 @@
         }
     },
     "Reviews": {
-        "title": "Why People Love Gusttimo"
+        "title": "Why People Love Gusttimo",
+        "items": {
+            "1": {
+                "name": "Aliya K.",
+                "text": "Best Belgian waffles in the city! The Nutella one is to die for."
+            },
+            "2": {
+                "name": "Rustam T.",
+                "text": "Chocolate cheesecake was absolutely delicious. Premium quality."
+            },
+            "3": {
+                "name": "Zuhra N.",
+                "text": "Prices are very reasonable for such high quality gelato. My kids love it."
+            },
+            "4": {
+                "name": "Timur A.",
+                "text": "Authentic Italian taste right here in Tashkent. Smooth service too."
+            },
+            "5": {
+                "name": "Feruza I.",
+                "text": "The presentation is top notch, and the vibe is perfect for a weekend date."
+            }
+        }
     },
     "Locations": {
         "title": "Our Branches",
