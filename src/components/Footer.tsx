@@ -25,7 +25,7 @@ export default function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left mb-16 relative z-10 border-t border-background/10 pt-16">
                     {/* Navigation */}
                     <div className="flex flex-col items-center md:items-start space-y-4">
-                        <h4 className="text-primary font-bold tracking-widest uppercase text-sm mb-2">Explore</h4>
+                        <h4 className="text-primary font-bold tracking-widest uppercase text-sm mb-2">{t('explore')}</h4>
                         <Link href="/menu" className="text-xl font-serif text-background/80 hover:text-white transition-colors hover:translate-x-2 transform duration-300 w-fit">{t('menu')}</Link>
                         <Link href="/locations" className="text-xl font-serif text-background/80 hover:text-white transition-colors hover:translate-x-2 transform duration-300 w-fit">{t('locations')}</Link>
                         <Link href="/about" className="text-xl font-serif text-background/80 hover:text-white transition-colors hover:translate-x-2 transform duration-300 w-fit">{t('about')}</Link>
@@ -33,14 +33,14 @@ export default function Footer() {
 
                     {/* Socials */}
                     <div className="flex flex-col items-center md:items-start space-y-4">
-                        <h4 className="text-primary font-bold tracking-widest uppercase text-sm mb-2">Socials</h4>
-                        <a href="https://instagram.com/gusttimo.uz" target="_blank" rel="noopener noreferrer" className="text-xl font-serif text-background/80 hover:text-white transition-colors hover:translate-x-2 transform duration-300 w-fit">Instagram</a>
-                        <a href="https://www.facebook.com/gusttimouz/" target="_blank" rel="noopener noreferrer" className="text-xl font-serif text-background/80 hover:text-white transition-colors hover:translate-x-2 transform duration-300 w-fit">Facebook</a>
+                        <h4 className="text-primary font-bold tracking-widest uppercase text-sm mb-2">{t('socials')}</h4>
+                        <a href="https://instagram.com/gusttimo.uz" target="_blank" rel="noopener noreferrer" className="text-xl font-serif text-background/80 hover:text-white transition-colors hover:translate-x-2 transform duration-300 w-fit">{t('instagram')}</a>
+                        <a href="https://www.facebook.com/gusttimouz/" target="_blank" rel="noopener noreferrer" className="text-xl font-serif text-background/80 hover:text-white transition-colors hover:translate-x-2 transform duration-300 w-fit">{t('facebook')}</a>
                     </div>
 
                     {/* Meta */}
                     <div className="flex flex-col items-center md:items-start space-y-4">
-                        <h4 className="text-primary font-bold tracking-widest uppercase text-sm mb-2">Delivery</h4>
+                        <h4 className="text-primary font-bold tracking-widest uppercase text-sm mb-2">{t('delivery')}</h4>
                         <a href="https://wolt.com" target="_blank" rel="noopener noreferrer" className="text-xl font-serif text-background/80 hover:text-white transition-colors hover:translate-x-2 transform duration-300 w-fit">Wolt</a>
                         <a href="https://yandex.com/delivery" target="_blank" rel="noopener noreferrer" className="text-xl font-serif text-background/80 hover:text-white transition-colors hover:translate-x-2 transform duration-300 w-fit">Yandex Go</a>
                     </div>
@@ -48,8 +48,8 @@ export default function Footer() {
 
                 {/* Copyright */}
                 <div className="border-t border-background/10 pt-8 flex flex-col md:flex-row justify-between items-center text-background/40 text-sm">
-                    <p>© {new Date().getFullYear()} Gusttimo. All rights reserved.</p>
-                    <p className="mt-2 md:mt-0 italic">Designed for Dessert Lovers</p>
+                    <p>&copy; {new Date().getFullYear()} Gusttimo. {t('rights')}</p>
+                    <p className="mt-2 md:mt-0 italic">{t('designedBy')}</p>
                 </div>
             </div>
         </footer>

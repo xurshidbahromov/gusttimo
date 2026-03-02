@@ -114,7 +114,7 @@ export default function HeroSection() {
                 transition={{ delay: 2, duration: 1 }}
                 className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-foreground/50 text-sm font-medium"
             >
-                <span>Scroll to Explore</span>
+                <span>{t('scrollExplore')}</span>
                 <motion.div
                     animate={{ y: [0, 8, 0] }}
                     transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}

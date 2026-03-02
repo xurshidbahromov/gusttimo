@@ -1,5 +1,6 @@
 {
     "Navigation": {
+        "home": "Asosiy",
         "menu": "Menyu",
         "locations": "Filiallar",
         "about": "Biz haqimizda"
@@ -9,13 +10,17 @@
         "subtitle": "O'zbekistonda original jelato va Belgiya vaflilari",
         "viewMenu": "Menyuni ko'rish",
         "ourLocations": "Filiallarimiz",
-        "orderWolt": "Wolt orqali buyurtma"
+        "orderWolt": "Wolt orqali buyurtma",
+        "scrollExplore": "Kashf etish uchun pastga"
     },
     "About": {
         "title": "Gusttimo Hikoyasi",
         "subtitle": "Toshkent markazida Italiya nafasi.",
         "description1": "Gusttimo - bu asl italyan shirinliklariga bo'lgan muhabbat va zamonaviy tezkor xizmatning uyg'unlashgan joyi.",
-        "description2": "Tezkor tamaddi, oilaviy dam olish yoki shirin xordiq izlayotgan bo'lsangiz ham — bizning jelato va Belgiya vaflilarimiz har kuni yangi tayyorlanadi."
+        "description2": "Tezkor tamaddi, oilaviy dam olish yoki shirin xordiq izlayotgan bo'lsangiz ham — bizning jelato va Belgiya vaflilarimiz har kuni yangi tayyorlanadi.",
+        "tradition": "An'ana va Zamonaviylik",
+        "whyChoose": "Nega aynan Gusttimo?",
+        "scroll": "Pastga"
     },
     "Features": {
         "recipe": "Asl Italiya retsepti",
@@ -27,6 +32,7 @@
         "searchPlaceholder": "Menyudan qidirish...",
         "title": "Bizning Menyu",
         "subtitle": "Maxsus ta'mlarimizni kashf eting",
+        "noItems": "Hech narsa topilmadi",
         "priceLabel": "Narx",
         "weightLabel": "Hajm",
         "details": "Batafsil",
@@ -56,6 +62,15 @@
     "Locations": {
         "title": "Bizning Filiallarimiz",
         "getDirections": "Manzilni ko'rish"
+    },
+    "Footer": {
+        "explore": "Kashf etish",
+        "socials": "Ijtimoiy Tarmoqlar",
+        "delivery": "Yetkazib berish",
+        "designedBy": "Shirinlik sevuvchilar uchun yaratildi",
+        "rights": "Barcha huquqlar himoyalangan.",
+        "instagram": "Instagram",
+        "facebook": "Facebook"
     },
     "Instagram": {
         "title": "Bizni kuzatib boring",

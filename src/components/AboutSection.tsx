@@ -63,7 +63,7 @@ export default function AboutSection() {
                         transition={{ delay: 1, duration: 1 }}
                         className="absolute -bottom-32 md:-bottom-48 flex flex-col items-center gap-2 text-foreground/50"
                     >
-                        <span className="text-xs uppercase tracking-widest font-semibold">Scroll</span>
+                        <span className="text-xs uppercase tracking-widest font-semibold">{t('scroll')}</span>
                         <motion.div
                             animate={{ y: [0, 10, 0] }}
                             transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
@@ -162,7 +162,7 @@ export default function AboutSection() {
                             <div className="inline-flex items-center gap-5 p-5 rounded-2xl bg-primary/10 border border-primary/20 self-center lg:self-start shadow-xl shadow-primary/5">
                                 <Award className="text-primary w-8 h-8 shrink-0" />
                                 <p className="font-serif italic text-sm text-foreground/90 font-black uppercase tracking-widest whitespace-nowrap">
-                                    Tradition & Modernity
+                                    {t('tradition')}
                                 </p>
                             </div>
                         </motion.div>
@@ -178,7 +178,7 @@ export default function AboutSection() {
                                 viewport={{ once: true, margin: "-100px" }}
                                 className="text-2xl md:text-3xl font-black tracking-tight mb-8 md:mb-10 font-serif italic text-center lg:text-left"
                             >
-                                Why Choose Gusttimo?
+                                {t('whyChoose')}
                             </motion.h4>
 
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">

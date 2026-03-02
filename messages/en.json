@@ -1,5 +1,6 @@
 {
     "Navigation": {
+        "home": "Home",
         "menu": "Menu",
         "locations": "Locations",
         "about": "About"
@@ -9,13 +10,17 @@
         "subtitle": "Original Gelato & Belgian Waffles in Uzbekistan",
         "viewMenu": "View Menu",
         "ourLocations": "Our Locations",
-        "orderWolt": "Order via Wolt"
+        "orderWolt": "Order via Wolt",
+        "scrollExplore": "Scroll to Explore"
     },
     "About": {
         "title": "The Gusttimo Story",
         "subtitle": "A slice of Italy in the heart of Tashkent.",
         "description1": "Born from a love for authentic Italian desserts, Gusttimo is where tradition meets modern quick service.",
-        "description2": "Whether you are here for a quick bite, a family treat, or a sweet escape, our gelato and Belgian waffles are made fresh daily using only the finest ingredients."
+        "description2": "Whether you are here for a quick bite, a family treat, or a sweet escape, our gelato and Belgian waffles are made fresh daily using only the finest ingredients.",
+        "tradition": "Tradition & Modernity",
+        "whyChoose": "Why Choose Gusttimo?",
+        "scroll": "Scroll"
     },
     "Features": {
         "recipe": "Original Italian Recipe",
@@ -27,6 +32,7 @@
         "searchPlaceholder": "Search menu...",
         "title": "Our Menu",
         "subtitle": "Discover our special flavors",
+        "noItems": "No items found",
         "priceLabel": "Price",
         "weightLabel": "Weight",
         "details": "Details",
@@ -56,6 +62,15 @@
     "Locations": {
         "title": "Our Branches",
         "getDirections": "Get Directions"
+    },
+    "Footer": {
+        "explore": "Explore",
+        "socials": "Socials",
+        "delivery": "Delivery",
+        "designedBy": "Designed for Dessert Lovers",
+        "rights": "All rights reserved.",
+        "instagram": "Instagram",
+        "facebook": "Facebook"
     },
     "Instagram": {
         "title": "Follow the sweet life",

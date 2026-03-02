@@ -121,7 +121,7 @@ export default function Navbar() {
                                     <motion.div layoutId="mobileNavBg" className="absolute inset-0 bg-foreground rounded-[1.25rem] md:rounded-[1.5rem]" transition={{ type: "spring", bounce: 0.2, duration: 0.6 }} />
                                 )}
                                 <Home className={`relative z-10 w-6 h-6 md:w-7 md:h-7 mb-1 transition-colors ${activeTab === 'home' ? 'text-background' : 'text-foreground/50'}`} />
-                                <span className={`relative z-10 text-[10px] md:text-xs font-bold transition-colors ${activeTab === 'home' ? 'text-background' : 'text-foreground/50'}`}>Home</span>
+                                <span className={`relative z-10 text-[10px] md:text-xs font-bold transition-colors ${activeTab === 'home' ? 'text-background' : 'text-foreground/50'}`}>{t('home', { default: 'Home' })}</span>
                             </Link>
 
                             {/* Menu Tab */}

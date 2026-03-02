@@ -341,7 +341,7 @@ export default function MenuSection() {
                 ) && (
                         <div className="text-center py-24 flex flex-col items-center justify-center">
                             <Search className="w-12 h-12 text-foreground/20 mb-4" />
-                            <h3 className="text-2xl font-serif italic text-foreground/60 mb-2">No items found</h3>
+                            <h3 className="text-2xl font-serif italic text-foreground/60 mb-2">{t('noItems', { default: 'No items found' })}</h3>
                             <p className="text-foreground/40">Try adjusting your search query to find what you're looking for.</p>
                             <button
                                 onClick={() => setSearchQuery('')}
