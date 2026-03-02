@@ -3,19 +3,22 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslations } from "next-intl";
 
+let hasShownPreloader = false;
+
 export default function Preloader() {
-    const [isLoading, setIsLoading] = useState(true);
-    const [instantHide, setInstantHide] = useState(false);
+    const [isLoading, setIsLoading] = useState(!hasShownPreloader);
+    const [instantHide, setInstantHide] = useState(hasShownPreloader);
     const t = useTranslations('Hero');
 
     useEffect(() => {
-        // Only run animation once per session
-        const hasSeen = sessionStorage.getItem('gusttimo_preloader_seen');
-        if (hasSeen) {
+        // Run animation if it hasn't been shown in this JS environment (hard reload/fresh visit)
+        if (hasShownPreloader) {
             setInstantHide(true);
             setIsLoading(false);
             return;
         }
+
+        hasShownPreloader = true;
 
         // Prevent scrolling while loading
         document.body.style.overflow = "hidden";
@@ -23,7 +26,6 @@ export default function Preloader() {
         // Artificial delay to show the nice animation and ensure assets are ready
         const timer = setTimeout(() => {
             setIsLoading(false);
-            sessionStorage.setItem('gusttimo_preloader_seen', 'true');
             // Restore smooth scrolling for Lenis
             document.body.style.overflow = "";
         }, 2200); // 2.2 seconds total loading screen
