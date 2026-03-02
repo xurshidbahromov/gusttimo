@@ -18,7 +18,7 @@ export default function Footer() {
                         GUSTTIMO
                     </h2>
                     <p className="mt-8 text-2xl font-serif italic text-background/60 max-w-md mx-auto">
-                        Taste the Italian Wave 🇮🇹<br />Original Gelato & Waffles
+                        {tNav('about')} &bull; Gelato & Waffles
                     </p>
                 </div>
 

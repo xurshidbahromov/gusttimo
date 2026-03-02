@@ -1,9 +1,11 @@
 "use client";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 export default function Preloader() {
     const [isLoading, setIsLoading] = useState(true);
+    const t = useTranslations('Hero');
 
     useEffect(() => {
         // Prevent scrolling while loading
@@ -85,9 +87,9 @@ export default function Preloader() {
                             variants={textVariants}
                             initial="hidden"
                             animate="visible"
-                            className="text-background/60 tracking-widest text-xs md:text-sm uppercase font-semibold"
+                            className="text-background/60 tracking-widest text-xs md:text-sm uppercase font-semibold text-center mt-2 px-4"
                         >
-                            Taste the Italian Wave
+                            {t('subtitle')}
                         </motion.p>
                     </div>
 
