@@ -52,9 +52,11 @@ export default function AboutSection() {
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 1, ease: "easeOut" }}
-                        className="text-[4.5rem] sm:text-[8rem] md:text-[14rem] lg:text-[18rem] font-serif font-black italic tracking-tighter text-foreground uppercase leading-none opacity-90 text-center"
+                        className="text-[4rem] sm:text-[6rem] md:text-[10rem] lg:text-[12rem] px-4 font-serif font-black italic tracking-tighter text-foreground uppercase leading-[0.9] opacity-90 text-center text-balance mix-blend-multiply"
                     >
-                        {t('title').split(' ')[0]}
+                        {t.rich('title', {
+                            highlight: (chunks) => <span className="text-primary block md:inline lg:px-4">{chunks}</span>
+                        })}
                     </motion.h1>
 
                     <motion.div
